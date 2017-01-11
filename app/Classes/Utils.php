@@ -32,4 +32,15 @@ class Utils
         return $output;
     }
 
+    public static function rename_user_to_player($input){
+        $output = [];
+        foreach ($input as $comment) {
+            $player = $comment['user'];
+            unset($comment['user']);
+            $comment['player'] = $player;
+            array_push($output, $comment);
+        }
+        return $output;
+    }
+
 }

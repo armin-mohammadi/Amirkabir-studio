@@ -16,7 +16,8 @@ class MainController extends Controller
     	$slider = Utils::customize_game_result($temp);
     	$temp = Game::idDescending()->take(4)->with(['categories'])->get();
     	$new_games = Utils::customize_game_result($temp);
-    	$temp = Comment::dateDescending()->take(4)->with(['users'])->get();
+    	$temp = Comment::dateDescending()->take(4)->with(['user'])->get();
+        $temp = Utils::rename_user_to_player($temp);
     	$comments = Utils::convert_dates($temp);
     	$json = file_get_contents('http://api.ie.ce-it.ir/F95/home.json');
     	$content = json_decode($json, true);

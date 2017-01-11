@@ -24,7 +24,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'id'
+        'password', 'remember_token', 'id', 'created_at', 'updated_at', 'email'
     ];
 
     public function comments()

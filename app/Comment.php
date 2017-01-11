@@ -11,7 +11,7 @@ class Comment extends Model
     ];
 
     protected $hidden = [
-        'id', 'email', 'user_id', 'game_id'
+        'id', 'email', 'user_id', 'game_id', 'created_at', 'updated_at'
     ];
 
     public function scopeDateDescending($query)
