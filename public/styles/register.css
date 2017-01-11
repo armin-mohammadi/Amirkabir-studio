@@ -1,0 +1,33 @@
+/* 	css rules for register.html page
+	author: 9231017;
+	date: dd-mm-yy;
+	version: 0.1;
+*/
+
+.checkbox_container {
+	margin: 25px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin:0 0 0 4px;
+    vertical-align:middle;
+    background:url(../assets/check_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(../assets/check_sheet.png) -24px top no-repeat;
+}

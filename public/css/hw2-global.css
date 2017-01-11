@@ -1,0 +1,240 @@
+/* 	global css rules in hw2 pages like font-family (@font-face), boxes, and login-register inputs
+	author: 9231017;
+	date: dd-mm-yy;
+	version: 0.1;
+*/
+
+@font-face {
+    font-family: persian-font;
+    src: url(../assets/Shabnam.ttf);
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../assets/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../assets/MaterialIcons-Regular.woff) format('woff'),
+       url(../assets/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 72px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  color: white;
+}
+
+body {
+	background-color: #4176a3;
+	margin: 0;
+	font-family: persian-font;
+}
+
+.nav_bar {
+	width: 70%;
+	background-color: #4d4d4d;
+	overflow: hidden;
+	padding-left: 15%;
+	padding-right: 15%;
+	box-shadow: 0 5px 10px #444444;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	-webkit-flex-direction: row;
+	align-items: center;
+    flex-direction: row;
+}
+
+.nav_bar_text {
+	color: #ffffff;
+	direction: rtl;
+	font-size: 30px;
+}
+
+.nav_bar_empty_space {
+	width: 100%;
+}
+
+.card_view {
+	width: 400px;
+	height: 500px;
+	background-color: #e3e3e3;
+	box-shadow: 2px 2px 10px #444444;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -225px;
+}
+
+.card_view > div {
+	text-align: center;
+}
+
+.card_title {
+	font-size: 30px;
+	color: #7d7d7d;
+	padding: 25px;
+}
+
+.textfield_container {
+	display: table;
+	padding: 0;
+}
+
+.material-icons.textfield_icon {
+	font-size: 36px;
+	color: #7d7d7d;
+	display: table-cell;
+    vertical-align: bottom;
+}
+
+.textfield {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.button {
+	width: 350px;
+	height: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	/*color: white;*/
+	margin: 45px 15px 15px 15px;
+	border: 0;
+	font-family: persian-font;
+	font-size: 25px;
+}
+
+.button.red {
+	background-color: #d9346b;
+}
+
+.button.blue {
+	background-color: #297bff;
+}
+
+.button.red:hover {
+	background-color: #de4e7f;
+	box-shadow: 0 0 20px #dddddd;
+}
+
+.button.blue:hover {
+	background-color: #3d95ff;
+	box-shadow: 0 0 20px #bbbbbb;
+}
+
+.button.red:focus {
+	background-color: #de4e7f;
+	box-shadow: 0 0 20px #dddddd;
+}
+
+.button.blue:focus {
+	background-color: #3d95ff;
+	box-shadow: 0 0 20px #bbbbbb;
+}
+
+input {
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-top: 25px;
+  	width: 325px;
+  	direction: rtl;
+  	display: block;
+  	border: none;
+  	padding: 10px 0;
+  	border-bottom: solid 1px #7d7d7d;
+    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #d9346b 4%);
+  	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #d9346b 4%);
+  	background-position: -325px 0;
+  	background-size: 325px 100%;
+  	background-repeat: no-repeat;
+  	color: #7d7d7d;
+  	font-family: persian-font;
+  	font-size: 20px;
+}
+
+input:focus, input:valid {
+	box-shadow: none;
+	outline: none;
+	background-position: 0 0;
+}
+
+input::-webkit-input-placeholder {
+ 	font-family: persian-font;
+    -webkit-transition: all 0.3s ease-in-out;
+ 	transition: all 0.3s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+	color: #d9346b;
+	font-size: 13px;
+    -webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+	visibility: visible !important;
+}
+
+input:focus ~ .material-icons.textfield_icon {
+	color: #d9346b;
+}
+
+.button_link:link {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.button_link:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.button_link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.button_link:focus {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:link {
+    color: #477DF4;
+}
+
+a:visited {
+    color: #477DF4;
+}
+
+a:hover {
+    color: #3d95ff;
+}
+
+a:focus {
+    color: #3d95ff;
+}

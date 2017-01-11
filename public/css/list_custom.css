@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #fff;
+}
+.navbar span {
+    color: #7F8C8D;
+}
+
+.tab-content {
+    min-height: 40vh;
+}
+
+.header-div .title {
+    margin-right: 20%;
+}
+
+.col-md-3 {
+    float: right !important;
+}

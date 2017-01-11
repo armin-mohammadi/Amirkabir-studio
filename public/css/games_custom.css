@@ -1,0 +1,82 @@
+.navbar {
+    background-color: #fff;
+}
+
+.header-div .review-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-div .subtitle {
+    font-size: 1.5rem;
+    border-bottom: 2px dotted;
+}
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    *zoom:1;              /* for IE7*/
+}
+.nav-tabs {
+    text-align:center;
+    border-bottom: 2px solid #DDD;
+    background-color: whitesmoke;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+.nav-tabs > li > a { border: none; color: #666; }
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+.nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+
+.content-title {
+    font-size: 3rem;
+}
+
+.tab-content {
+    margin-bottom: 50px;
+}
+
+.thumbnail {
+    margin-bottom: 0;
+}
+
+#thumb-carousel-bounding-box .carousel-inner{
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.large-image {
+    height: 60vh !important;
+    width: 100%;
+}
+
+.large-image.video{
+    margin-bottom: -7px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 5vh;
+}
+
+.caption.title{
+    right: 3vh;
+    color: white;
+    font-size: 3rem;
+}
+
+.caption.views{
+    left: 3vh;
+    color: #00bfa5;
+    font-size: 2rem;
+}
+
+.carousel-arrow {
+    font-size: 7rem;
+}
+
+.navbar span {
+    color: #7F8C8D;
+}

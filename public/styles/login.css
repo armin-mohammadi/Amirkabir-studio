@@ -1,0 +1,50 @@
+/* 	css rules for login.html page
+	author: 9231017;
+	date: dd-mm-yy;
+	version: 0.1;
+*/
+
+.login_container {
+	width: 400px;
+	height: 425px;
+	background-color: #f5f5f5;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -225px;
+}
+
+.login_container > div {
+	text-align: center;
+}
+
+.register_link_container {
+	width: 400px;
+	height: 75px;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: 200px;
+	text-align: center;
+	font-size: 18px;
+	padding: 20px 20px 0px 0px; 
+	color: #7d7d7d;
+}
+
+.link1:link {
+	color: #7d7d7d;
+}
+
+.link1:visited {
+	color: #7d7d7d;
+}
+
+.link1:hover {
+	color: #000000;
+}
+
+.link1:focus {
+	color: #000000;
+}

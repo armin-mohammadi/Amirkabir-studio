@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'IranianSans';
+    src:
+        local('Iranian Sans'),
+        url('../fonts/iran_sans.ttf');
+}
+
+.transparent-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    height: 85vh !important;
+    margin: auto;
+}
+
+.item > div:first-child:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.7);
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.item > .container {
+    position: absolute;
+    right: 20%;
+    top:30%;
+    width: 60%;
+}
+
+.item > .container span {
+    color: white;
+}
+
+.item > .container .name {
+    font-size: 3rem;
+}
+
+.item > .container .description {
+    font-size: 1.5rem;
+}
+.owl-carousel span {
+    color: white;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.owl-carousel .overlay:not(button) {
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+
+
+.owl-carousel button {
+    color: black;
+    background: rgba(255,255,255,1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.owl-carousel .selected-btn:not(div){
+    background: rgba(255,255,255,0.6);
+}
+
+.owl-carousel .hide {
+    display: none;
+}
+
+.owl-carousel .show {
+    display: inline-block;
+}
+
+.selected-item:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background: #0e8c7a;
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.item-container.hover:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:150%;
+    top:-50%; left:0;
+    background: #1a90de;
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.owl-carousel img {
+    width: auto; /* Set width to 100% */
+    height: 15vh !important;
+}
+
+.latest-games-container {
+    margin-top: 5vh;
+    height: 35vh;
+    padding: 0 20%;
+    background-color: white;
+}
+
+.latest-games-container .carousel-inner {
+    position: absolute;
+    top: 3em;
+    left: 0;
+}
+
+.latest-games-container .img-responsive {
+    height: 10em !important;
+}
+
+.latest-games-container > div > div > div > div > div {
+    margin: 1em 0 1em 0;
+}
+.latest-games-container > div > div > div > div {
+    margin: 0 1em;
+}
+
+.latest-games-container .carousel-indicators {
+    position: absolute;
+    top: 1em;
+    left: 5em;
+}
+
+.latest-games-container .carousel-indicators li{
+    background-color: #cdcdcd;
+    margin: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.latest-games-container .carousel-indicators .active{
+    background-color: #198edc;
+    margin: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.latest-games-container .game-title {
+    color: #3b9ee1;
+}
+
+.latest-games-container .game-categories {
+    color: #8e8e8e;
+}
+
+.latest-games-container .title {
+    position: absolute;
+    right: 22%;
+    font-size: 2rem;
+}
+
+.guides-and-comments-container {
+    height: auto;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-top: solid #eaeef1;
+    border-top-width: 2px;
+    padding: 2vh 0;
+}
+
+.guides-and-comments-container .title {
+    padding-right: 22%;
+    font-size: 2rem;
+}
+
+.guides-and-comments-container .subtitle {
+    font-size: 1.3rem;
+}
+
+.guides-and-comments-container .mycontainer {
+    margin: 5vh 2vh;
+}
+
+.guides img {
+    width: 5.5em;
+    height: 3.5em;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 0;
+    border: transparent;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    min-height: 75px;
+}
+
+.list-group-item:last-child {
+    border: transparent;
+    border-bottom: transparent;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item-heading {
+    color: #3b9ee1;
+}
+
+.join-us {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: rgba(0, 150,220,0.8);
+}
+
+.join-us span {
+    color: white;
+}
+
+.join-us #first{
+    font-size: 3rem;
+}
+
+.join-us #second{
+    font-size: 2rem;
+}
+
+.join-us button {
+    background-color: white;
+    color: #8e8e8e;
+}
+
+.join-us:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100%;
+    background-image: url("../images/best_hd_assassins_creed_black_flag_game_wallpapers.jpg");
+}
+
+#large-carousel .row {
+    margin: 2em 0;
+}

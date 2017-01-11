@@ -1,0 +1,265 @@
+/* 	css rules for leaderboard.html page
+	author: 9231017;
+	date: dd-mm-yy;
+	version: 0.1;
+*/
+
+.card_view.leaderboard {
+	width: 450px;
+	height: auto;
+	margin-left: -225px;
+	margin-top: -300px;
+	background-color: #f5f5f5;
+}
+
+.card_title {
+	font-size: 20px;
+	color: #222222;
+	padding: 10px;
+}
+
+.top_3 {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	width: 450px;
+	height: 100px;
+    margin-top: 70px;
+}
+
+.top_indv_container {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.top_indv_container.rank_1 {
+    align-self: flex-end;
+}
+
+.rank {
+	width: 75px;
+	height: 75px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	background-color: #ffbe29;
+	padding: 3px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.rank_2_3 {
+	width: 60px;
+	height: 60px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	border-radius: 35px;
+	background-color: #888888;
+	position: relative;
+	padding: 3px;
+    margin: 0 auto;
+}
+
+.rank_2_3.rank_2 {
+	background-color: #a3a3a3;
+}
+
+.rank_2_3.rank_3 {
+	background-color: #aa5d41;
+}
+
+.five_star {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    margin: 0 24px;
+}
+
+.five_star > i {
+    font-size: 15px;
+    color: #ffbe29;
+}
+
+.five_star > span {
+    font-size: 15px;
+    color: #bbbbbb;
+}
+
+.five_star.list_five_star {
+    margin: 0 0;
+}
+
+.score {
+    font-size: 20px;
+    color: #80B14C;
+}
+
+.score.list_score {
+    font-size: 16px;
+    text-align: right
+}
+
+.level {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	width: 18px;
+	height: 20px;
+}
+
+.square {
+	width: 10px;
+	height: 16px;
+	background-color: #4d4d4d;
+	position: absolute;
+	left: 4px;
+	vertical-align: middle;
+}
+
+.triangle1 {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 4px solid #4d4d4d;
+}
+
+.triangle2 {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 4px solid #4d4d4d;
+}
+
+.level.rank1 {
+	width: 24px;
+	height: 22px;
+}
+
+.square.rank1 {
+	width: 12px;
+	height: 20px;
+	left: 6px;
+}
+
+.triangle1.rank1 {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 6px solid #4d4d4d;
+}
+
+.triangle2.rank1 {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 6px solid #4d4d4d;
+}
+
+.level_text1 {
+	font-size: 14px;
+	margin-left: -2px;
+	color: white;
+}
+
+.level_text2 {
+	font-size: 10px;
+	margin-top: 1px;
+	margin-left: -1px;
+	color: white;
+}
+
+.img_rank1 {
+	width: 75px;
+	height: 75px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.img_rank2_3 {
+	width: 60px;
+	height: 60px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	border-radius: 35px;
+}
+
+.line {
+    margin: 50px 25px 10px 25px;
+}
+
+.list {}
+
+.list > div {
+    height: 60px;
+    padding: 5px 25px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+}
+
+.list > div:hover {
+    background-color: #E9E9E9;
+}
+
+.list > div:hover > div > span {
+	color: #ffffff;
+}
+
+.list > div > div {
+    align-self: center;
+}
+
+.pic_container {
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #888888;
+    position: relative;
+    padding: 0;
+    margin: 0 15px;
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.name_score_container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 100%;
+}
+
+.list_name {
+    text-align: right;
+    font-size: 16px;
+}
+
+.material-icons.dots {
+    font-size: 10px;
+    color: #BCBCBC;
+    margin: 20px;
+}
