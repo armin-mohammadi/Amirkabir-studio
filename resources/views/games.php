@@ -61,13 +61,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.htm">
+                <a class="navbar-brand" href="/">
                     <div><span>امیرکبیر</span><span class="studio">استودیو</span><img src="images/gamepad2.png" class="gamepad"></div>
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#"><span>ورود</span></a></li>
+                    <li><a href="/login"><span>ورود</span></a></li>
                     <li><span class="material-icons navbar-icon">person</span></li>
                     <li>
                         <div class="span12">
@@ -140,11 +140,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="index.htm"><span>امیرکبیر</span><span class="studio">استودیو</span><img src="images/gamepad2.png" class="gamepad"></a>
+                        <a href="index"><span>امیرکبیر</span><span class="studio">استودیو</span><img src="images/gamepad2.png" class="gamepad"></a>
                     </div>
                     <div class="col-md-9 pull-right">
                         <span class="pull-right">
-                            <a href="index.htm">صفحه اصلی</a>
+                            <a href="index">صفحه اصلی</a>
                             <a href="#">درباره ما</a>
                             <a href="#">ارتباط با سازندگان</a>
                             <a href="#">سوالات متداول</a>

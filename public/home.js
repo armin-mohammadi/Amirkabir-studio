@@ -34,7 +34,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="row">
                                     <div class="text-right">
-                                        <button type="button" class="btn btn-default" onclick="location.href='games.htm?name=`+element['title']+`'">ورود به صفحه ی بازی</button>
+                                        <button type="button" class="btn btn-default" onclick="location.href='games?name=`+element['title']+`'">ورود به صفحه ی بازی</button>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ $(document).ready(function() {
                                 <div class="item-container">
                                     <img src="` + element['small_image'] + `">
                                 </div>
-                                <button type="button" class="btn btn-default overlay hide selected-btn" onclick="location.href='games.htm?name=`+element['title']+`'">صفحه بازی</button>
+                                <button type="button" class="btn btn-default overlay hide selected-btn" onclick="location.href='games?name=`+element['title']+`'">صفحه بازی</button>
                                 <div class="overlay hide text-right">
                                     <div><span>`+element['title']+`</span></div>
                                     <div><span>تعداد نظرات: `+element['number_of_comments']+`</span></div>
@@ -70,7 +70,7 @@ $(document).ready(function() {
                                         <div class="card-image">
                                             <div class="view overlay hm-white-slight z-depth-1">
                                                 <img src="`+element['small_image']+`" class="img-responsive" alt="">
-                                                <a href="games.htm?name=`+element['title']+`">
+                                                <a href="games?name=`+element['title']+`">
                                                     <div class="mask waves-effect"></div>
                                                 </a>
                                             </div>

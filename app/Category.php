@@ -10,8 +10,8 @@ class Category extends Model
         'id', 'created_at', 'updated_at'
     ];
 
-    // public function games()
-    // {
-    //     return $this->belongsToMany(Game::class);
-    // }
+    public function games()
+    {
+        return $this->belongsToMany(Game::class);
+    }
 }

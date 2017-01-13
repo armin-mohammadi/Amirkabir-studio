@@ -284,3 +284,7 @@ body {
 .header-div .title {
     font-size: 3.5rem;
 }
+
+.card .card-image img {
+    min-height: 170px;
+}

@@ -80,3 +80,7 @@
 .navbar span {
     color: #7F8C8D;
 }
+
+img {
+    max-width: 100%;
+}

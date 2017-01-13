@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Record extends Model
 {
     protected $hidden = [
-        'id', 'created_at', 'updated_at'
+        'id', 'created_at', 'updated_at', 'user_id', 'game_id'
     ];
 
     public function user()

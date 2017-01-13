@@ -15,10 +15,16 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/api/home.json', 'MainController@home');
-Route::get('/lhtml', function () {
-    return view('auth/lhtml');
+Route::get('/games', function () {
+    return view('games');
 });
+
+Route::get('/api/home.json', 'MainController@home');
+Route::get('/api/games/{name}/header', 'MainController@game_header');
+Route::get('/api/games/{name}/info', 'MainController@game_header');
+Route::get('/api/games/{name}/leaderboard', 'MainController@game_leaderboard');
+Route::get('/api/games/{name}/comments', 'MainController@game_comments');
+Route::get('/api/games/{name}/related_games', 'MainController@game_related');
 
 Route::get('/home', 'HomeController@index');
 

@@ -28,7 +28,7 @@ function traverse(el){
     }
 }
 
-$.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/header", function (result) {
+$.getJSON("/api/games/"+getParameterByName('name')+"/header", function (result) {
     var div = `<div class="row block verticalcenter no-margin">
             <div class="col-md-4">
                 <div class="text-right">
@@ -74,7 +74,7 @@ $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/heade
         emptyStar: '<i class="fa fa-star"></i>',
         displayOnly: true
     });
-    $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/info" , function (result) {
+    $.getJSON("/api/games/"+getParameterByName('name')+"/info" , function (result) {
         var content = result['response']['result']['game']['info'];
         $('#menu1').find('.content').append(content)
     });
@@ -84,13 +84,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(target).find('.content').html() == "") {
         switch (target) {
             case "#menu1":
-                $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/info" , function (result) {
+                $.getJSON("/api/games/"+getParameterByName('name')+"/info" , function (result) {
                     var content = result['response']['result']['game']['info'];
                     $(target).find('.content').append(content)
                 });
                 break;
             case "#menu2":
-                $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/leaderboard" , function (result) {
+                $.getJSON("/api/games/"+getParameterByName('name')+"/leaderboard" , function (result) {
                 result = result['response']['result'];
                 var content =
                 `<div class="card_view leaderboard">
@@ -172,7 +172,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                 });
                 break;
             case "#menu3":
-                $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/comments?offset=0" , function (result) {
+                $.getJSON("/api/games/"+getParameterByName('name')+"/comments?offset=0" , function (result) {
                     result = result['response']['result']['comments'];
                     var header = `
                                     <div class="row">
@@ -228,11 +228,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                 });
                 break;
             case "#menu4":
-                $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/related_games" , function (result) {
+                $.getJSON("/api/games/"+getParameterByName('name')+"/related_games" , function (result) {
                     result = result['response']['result']['games'];
-                    for (let i =1;i<16;i++){
-                        result[i] = result[0];
-                    }
+                    // for (let i =1;i<16;i++){
+                    //     result[i] = result[0];
+                    // }
                     var content = "";
                     $.each(result, function (index, element) {
                         if (index % 4 == 0) {
@@ -243,7 +243,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                                         <div class="card-image">
                                             <div class="view overlay hm-white-slight z-depth-1">
                                                 <img src="`+element['small_image']+`" class="img-responsive" alt="">
-                                                <a href="games.htm?name=`+element['title']+`">
+                                                <a href="games?name=`+element['title']+`">
                                                     <div class="mask waves-effect"></div>
                                                 </a>
                                             </div>
@@ -374,7 +374,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 });
 offset = 0;
 $("#load_more_comment").click(function() {
-    $.getJSON("http://api.ie.ce-it.ir/F95/games/"+getParameterByName('name')+"/comments?offset="+offset , function (result) {
+    $.getJSON("/api/games/"+getParameterByName('name')+"/comments?offset="+offset , function (result) {
         result = result['response']['result']['comments'];
         var content = "";
         $.each(result, function (index, element) {

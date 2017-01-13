@@ -1,68 +1,80 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
+	  <title>ورود</title>
+	  <meta name="description" content="ورود به سایت">
+	  <meta name="author" content="9231017">
+		<!-- CSRF Token -->
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+		<!-- Styles -->
+		<!-- <link href="/css/app.css" rel="stylesheet"> -->
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+		<!-- Scripts -->
+		<script>
+		    window.Laravel = <?php echo json_encode([
+		        'csrfToken' => csrf_token(),
+		    ]); ?>
+		</script>
+	  <link rel="stylesheet" href="styles/hw2-global.css">
+	  <link rel="stylesheet" href="styles/login.css">
+	  <!-- include the BotDetect layout stylesheet -->
+	  <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
+	</head>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+	<body>
+	  <div class="nav_bar">
+	  	<span class="material-icons">person</span>
+	  	<div class="nav_bar_empty_space"></div>
+	  	<div class="nav_bar_text">ceitgames</div>
+	  </div>
+	  <div class="card_view">
+	  	<div class="login_container">
+	  		<form role="form" method="POST" action="{{ url('/login') }}">
+	  			{{ csrf_field() }}
+		  		<div class="card_title">ورود</div>
+		  		<div class="textfield_container">
+		  			<input class="textfield" placeholder="ایمیل یا شماره تلفن" type="email" id="email" name="email" value="{{ old('email') }}" required>
+		  			<span class="material-icons textfield_icon">mail</span>
+	  			</div>
+		  		<div class="textfield_container">
+		  			<input id="password" class="textfield" placeholder="رمز عبور" type="password" name="password" required>
+		  			<span class="material-icons textfield_icon">lock</span>
+	  			</div>
+	  			@if ($errors->has('email'))
+		  			<span class="help-block">
+		  				<strong>{{ $errors->first('email') }}</strong>
+		  			</span>
+	  			@endif
+	  			<div class="textfield_container">
+		  			{!! captcha_image_html('LoginCaptcha') !!}
+                	<input type="text" class="textfield" name="CaptchaCode" id="CaptchaCode" placeholder="کد امنیتی" required>
+		  			<span class="material-icons textfield_icon">security</span>
+	  			</div>
+	  			@if ($errors->has('CaptchaCode'))
+		  			<span class="help-block">
+		  				<strong>{{ $errors->first('CaptchaCode') }}</strong>
+		  			</span>
+	  			@endif
+                <div class="checkbox_container">
+		  			<input type="checkbox" id="c1" name="remember" {{ old('remember') ? 'checked' : ''}}/>
+					<label for="c1" class="label">
+						مرا به یاد داشته باش<span></span>
+					</label>
+				</div>
+				<button class="button red" type="submit">ورود</button>
+  			</form>
+	  	</div>
+	  	<div class="register_link_container">حساب کاربری ندارید؟ 
+	  		<a href="register">ثبت نام کنید</a>
+	  	</div>
+	  </div>
+	  	  <!-- <strong>{{ dd($errors) }}</strong> -->
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+	  	<!-- Scripts -->
+    	<script src="/js/app.js"></script>
+	</body>
+	
+</html>
